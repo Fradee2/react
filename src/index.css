@@ -32,9 +32,56 @@ code {
   display: none;
 }
 
-.filter{
+.button{
   color:rgb(141, 141, 141);
   background: #fff;
   border: none;
+  outline: none;
+}
+
+.active_button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid lightgray;
+
+}
+
+.filter_active{
+  border:1px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px lightgray;
+}
+
+.title{
+  text-align: center;
+  color:red;
+  opacity: .3;
+  font-size: 100px;
+  margin-bottom:100px ;
+  font-weight: 2;
+}
+.input{
+  border: none;
+  font-size: 30px;
+  width: 91%;
+  outline: none;
+}
+.form{
+  border: 1px solid lightgray;
+}
+.add_task{
+  border: none;
+  background: #fff;
+  color:lightgray;
+  font-size: 30px;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(238, 238, 238);
+}
+button,
+button:active,
+button:focus {
   outline: none;
 }

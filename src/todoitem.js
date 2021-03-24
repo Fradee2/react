@@ -19,7 +19,8 @@ function ToDoItem({todo,index, onChange}){
             padding:'.5rem 1 rem',
             border:'1px solid lightgrey',
             borderRadius:'4px',
-            marginBottom:'0.5rem'
+            marginBottom:'0.5rem',
+            marrginTop:'20px'
         },
         input:{
             marginRight:'1rem'

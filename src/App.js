@@ -2,21 +2,9 @@ import React from 'react'
 import ToDoList from "./todolist";
 import Context from "./context"
 import AddToDo from "./addToDo";
-import footer from "./footer";
 
 function App() {
-    const [todos,setTodos]=React.useState(  [      {id:1,
-            value:'dg',
-            check:true},
-        {id:2,
-            value:'ddfg',
-            check:false},
-        {id:3,
-            value:'dsdfsdfg',
-            check:false},
-        {id:4,
-            value:'dsdfasg',
-            check:false}])
+    const [todos,setTodos]=React.useState(  [      ])
 
     function todoslength(){
         return(todos.length)
@@ -45,11 +33,19 @@ function App() {
   return (
       <Context.Provider value={{removeToDo}}>
           <div className="wrapper">
-              <h1>todos</h1>
+              <h1 className="title">todos</h1>
               <AddToDo onCreate={addToDo}/>
               <ToDoList todos={todos} onToggle={toggleTodo}/>
+              <div className="active_button">
+                  <p className="counter"></p>
+                  <div className="filter_button">
+                  <button class="filter_active button">All</button>
+                  <button className=" button">Active</button>
+                  <button className=" button">Completed</button>
+                  </div>
+                  <button className="clear_completed button">Clear completed</button>
+              </div>
 
-                <footer/>
           </div>
       </Context.Provider>
   );
