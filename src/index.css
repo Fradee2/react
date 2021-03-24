@@ -28,3 +28,13 @@ code {
 .done{
   text-decoration: line-through;
 }
+.del{
+  display: none;
+}
+
+.filter{
+  color:rgb(141, 141, 141);
+  background: #fff;
+  border: none;
+  outline: none;
+}

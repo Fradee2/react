@@ -1,7 +1,8 @@
 import React from 'react'
 import ToDoList from "./todolist";
-import ToDoItem from "./todoitem";
-
+import Context from "./context"
+import AddToDo from "./addToDo";
+import footer from "./footer";
 
 function App() {
     const [todos,setTodos]=React.useState(  [      {id:1,
@@ -17,6 +18,10 @@ function App() {
             value:'dsdfasg',
             check:false}])
 
+    function todoslength(){
+        return(todos.length)
+    }
+
     function toggleTodo(id){
         setTodos(todos.map(todo=>{
           if (todo.id===id){
@@ -26,11 +31,27 @@ function App() {
         }))
     }
 
+    function removeToDo(id){
+        setTodos(todos.filter(todo=>todo.id!==id))
+    }
+
+    function addToDo(value){
+        setTodos(todos.concat([{
+            value,id:Date.now(),
+            check: false
+        }]))
+    }
+
   return (
-    <div className="wrapper">
-      <h1>todos</h1>
-        <ToDoList todos={todos} onToggle={toggleTodo}/>
-    </div>
+      <Context.Provider value={{removeToDo}}>
+          <div className="wrapper">
+              <h1>todos</h1>
+              <AddToDo onCreate={addToDo}/>
+              <ToDoList todos={todos} onToggle={toggleTodo}/>
+
+                <footer/>
+          </div>
+      </Context.Provider>
   );
 }
 
