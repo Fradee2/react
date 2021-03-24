@@ -32,7 +32,7 @@ function ToDoItem({todo, onChange}){
     return(
         <li style={style.li}>
             <span className={classes.join('')}>
-        <input checked={todo.check} className="checkbox" type="checkbox" onChange={()=>onChange(todo.id)}/>
+        <input checked={todo.check} className="checkbox"  className={todo.classe} type="checkbox" onChange={()=>onChange(todo.id)}/>
 
 
                 &nbsp;
