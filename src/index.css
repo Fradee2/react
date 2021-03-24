@@ -28,9 +28,7 @@ code {
 .done{
   text-decoration: line-through;
 }
-.del{
-  display: none;
-}
+
 
 .button{
   color:rgb(141, 141, 141);
@@ -50,7 +48,7 @@ code {
 .filter_active{
   border:1px solid lightgray;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px lightgray;
+  box-shadow: 0 0 5px lightgray;
 }
 
 .title{
@@ -84,4 +82,16 @@ button,
 button:active,
 button:focus {
   outline: none;
+}
+
+.checkbox{
+  margin-right: 1rem;
+}
+
+.counter{
+  color:lightgray;
+  margin-left: 10px;
+}
+.del{
+  display: none;
 }

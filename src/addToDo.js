@@ -1,6 +1,5 @@
 import React,{useState} from "react"
 import propTypes from "prop-types"
-import App from "./App";
 
 
 

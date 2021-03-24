@@ -4,12 +4,13 @@ import Context from "./context";
 
 
 
-function ToDoItem({todo,index, onChange}){
-    const {removeToDo}=useContext(Context)
+function ToDoItem({todo, onChange}){
+    const {}=useContext(Context)
     const classes=[]
     if (todo.check){
         classes.push('done')
     }
+
 
     const style= {
         li:{
@@ -20,28 +21,24 @@ function ToDoItem({todo,index, onChange}){
             border:'1px solid lightgrey',
             borderRadius:'4px',
             marginBottom:'0.5rem',
-            marrginTop:'20px'
+            marginTop:'10px',
+            height:'40px',
+            fontSize:'18px',
         },
-        input:{
-            marginRight:'1rem'
-        }
+
     }
 
 
     return(
         <li style={style.li}>
             <span className={classes.join('')}>
-        <input checked={todo.check} styles={style.input} type="checkbox" onChange={()=>onChange(todo.id)}/>
+        <input checked={todo.check} className="checkbox" type="checkbox" onChange={()=>onChange(todo.id)}/>
 
-    <strong>
-        {index+1}
-    </strong>
+
                 &nbsp;
         {todo.value}
         </span>
-        <button onClick={()=>removeToDo(todo.id)} className="rm" >
-            &times;
-        </button>
+
 
     </li>
     )
