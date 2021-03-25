@@ -10,6 +10,9 @@ export default function Add_input(){
 //         }
 //     }
     return(
-        <input className="input" />
+        <form className="form" >
+            <button className="add_task" type="submit">▼</button>
+            <input placeholder="What need to be done?" className="input" />
+        </form>
     )
 }

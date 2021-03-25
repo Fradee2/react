@@ -18,12 +18,7 @@ code {
   width: 600px;
 }
 
-.rm{
-  background: red;
-  border-radius: 50%;
-  color:#fff;
-  border:none;
-}
+
 
 .done{
   text-decoration: line-through;
@@ -60,13 +55,18 @@ code {
   font-weight: 2;
 }
 .input{
-  border: none;
   font-size: 30px;
   width: 91%;
   outline: none;
+  border: none;
 }
-.form{
+.todo_item{
   border: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 .add_task{
   border: none;
@@ -94,4 +94,8 @@ button:focus {
 }
 .del{
   display: none;
+}
+
+.form{
+  border: 1px solid lightgray;
 }
